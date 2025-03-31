@@ -46,7 +46,7 @@ Edit config.py to adjust:
     TEST_DURATION: Test duration in seconds (default: 60).
     PROXY_API_URL: Proxy source (default: https://www.sslproxies.org/; replace with a paid API for better reliability).
 
-# Changes for Higher Request Volume
+## Changes for Higher Request Volume
 
 Recent updates maximize the number of requests sent within the test duration:
 
@@ -60,7 +60,7 @@ Recent updates maximize the number of requests sent within the test duration:
     After: Without delays and with a batch size of 100, it can send 10,000–50,000+ requests in 60 seconds, depending on server response and network conditions.
     Tuning: Increase TEST_DURATION (e.g., to 600 seconds) or lower the batch size further (e.g., to 10) in floodpulse.py to approach NUM_REQUESTS = 100,000.
 
-# Example Output
+## Example Output
 text
 Welcome to FloodPulse!
 Enter the target URL (e.g., http://example.com:80): webfreakz.in:443
@@ -72,7 +72,7 @@ FloodPulse test complete in 60.05s. Sent 50000 requests to https://webfreakz.in:
 Proxy direct: 49800 successes, 200 fails, avg latency 0.12s
 Scaling to 1M Users
 
-# For massive tests (e.g., 1M requests or users):
+## For massive tests (e.g., 1M requests or users):
 
     Increase NUM_REQUESTS and TEST_DURATION in config.py (e.g., NUM_REQUESTS = 1000000, TEST_DURATION = 600).
     Lower the batch size in floodpulse.py (e.g., replace if len(tasks) >= 100 with if len(tasks) >= 10).
@@ -82,7 +82,7 @@ Scaling to 1M Users
 ## Legal Notice
 
 FloodPulse is intended solely for legitimate penetration testing and server resilience evaluation by authorized users. Use this tool only on systems you own or have explicit, written permission to test. Unauthorized use, including targeting systems without consent, may violate local, national, or international laws (e.g., the Computer Fraud and Abuse Act in the U.S., the Computer Misuse Act in the U.K., or the Indian Information Technology Act, 2000), as well as terms of service of networks or proxy providers. The developers of FloodPulse are not responsible for any misuse, damages, or legal consequences resulting from improper use of this tool. Always ensure compliance with applicable laws and ethical guidelines before running FloodPulse.
-# License
+## License
 
 FloodPulse is licensed under the MIT License. See the  file for details.
 Contributing
